@@ -8,16 +8,23 @@ jQuery(function ($) {
     (function () {
 
         $("#back-countdiown").countdown({
-            date: "25 june 2020 00:00:00",
+            date: "07 july 2021 00:00:00",
             format: "on"
         });
     
     }()); 
 
 
-}); // JQuery end
+}); // JQuery endDate
 
 
 $(document).on('click', '.m-menu .dropdown-menu', function(e) {
   e.stopPropagation()
 })
+
+window.onload = () => {
+
+    let quoteId = Math.floor(Math.random() * quoteArray.length);
+    document.getElementById("quote-words").innerHTML = quoteArray[quoteId];
+
+}  
